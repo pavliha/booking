@@ -1,11 +1,18 @@
 import React from 'react'
 import { object } from 'prop-types'
-import { withStyles } from '@material-ui/core'
+import { withStyles, Card } from '@material-ui/core'
 import connector from './connector'
+import MyTableHead from './MyTableHead'
+import MyTableBody from './MyTableBody'
 
 const styles = () => ({
   root: {
-    paddingTop: 30,
+    marginTop: 30,
+  },
+  card: {
+    padding: 20,
+    display: 'flex',
+    justifyContent: 'center',
   },
 })
 
@@ -25,7 +32,12 @@ class IndexScene extends React.Component {
     const { classes } = this.props
     return (
       <div className={classes.root}>
-        aa
+        <Card className={classes.card}>
+          <div>
+            <MyTableHead />
+            <MyTableBody />
+          </div>
+        </Card>
       </div>
     )
   }
