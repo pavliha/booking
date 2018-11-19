@@ -1,6 +1,8 @@
+/* eslint-disable no-shadow */
 import React from 'react'
 import { object } from 'prop-types'
-import { Paper, Table, TableBody, TableCell, TableRow, Button, withStyles } from '@material-ui/core'
+import { Paper, Table, TableBody, TableCell, TableRow, withStyles } from '@material-ui/core'
+import AddTimeButton from './AddTimeButton'
 
 const styles = () => ({
   root: {
@@ -35,15 +37,15 @@ const MyTableBody = ({ classes }) =>
           {rows.map(row =>
             <TableRow key={row.id}>
               <TableCell component="th" scope="row">{row.day}</TableCell>
-              <TableCell numeric><Button>{row.ten}</Button></TableCell>
-              <TableCell numeric><Button>{row.eleven}</Button></TableCell>
-              <TableCell numeric><Button>{row.twelve}</Button></TableCell>
-              <TableCell numeric><Button>{row.thirteen}</Button></TableCell>
-              <TableCell numeric><Button>{row.fourteen}</Button></TableCell>
-              <TableCell numeric><Button>{row.fifteen}</Button></TableCell>
-              <TableCell numeric><Button>{row.sixteen}</Button></TableCell>
-              <TableCell numeric><Button>{row.seventeen}</Button></TableCell>
-              <TableCell numeric><Button>{row.eighteen}</Button></TableCell>
+              <TableCell numeric> <AddTimeButton rowId={row.id} value={row.ten} /> </TableCell>
+              <TableCell numeric> <AddTimeButton rowId={row.id} value={row.eleven} /> </TableCell>
+              <TableCell numeric> <AddTimeButton rowId={row.id} value={row.twelve} /> </TableCell>
+              <TableCell numeric> <AddTimeButton rowId={row.id} value={row.thirteen} /> </TableCell>
+              <TableCell numeric> <AddTimeButton rowId={row.id} value={row.fourteen} /> </TableCell>
+              <TableCell numeric> <AddTimeButton rowId={row.id} value={row.fifteen} /> </TableCell>
+              <TableCell numeric> <AddTimeButton rowId={row.id} value={row.sixteen} /> </TableCell>
+              <TableCell numeric> <AddTimeButton rowId={row.id} value={row.seventeen} /> </TableCell>
+              <TableCell numeric> <AddTimeButton rowId={row.id} value={row.eighteen} /> </TableCell>
             </TableRow>)}
         </TableBody>
       </Table>
