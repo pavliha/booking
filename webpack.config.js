@@ -29,14 +29,6 @@ module.exports = {
   },
   target: 'web',
 
-  devServer: {
-    contentBase: path.join(__dirname, 'public'),
-    compress: true,
-    port: 2000,
-    hot: true,
-    historyApiFallback: true,
-  },
-
   module: {
     rules: [
       {

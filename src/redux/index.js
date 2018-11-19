@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux'
 import layoutReducer from './layout/reducer'
-import tableReducer from './table/reducer'
+import monthsReducer from './months/reducer'
+import roomsReducer from './rooms/reducer'
 
 const reducers = combineReducers({
   layoutReducer,
-  tableReducer,
+  monthsReducer,
+  roomsReducer,
 })
 
 export default reducers
